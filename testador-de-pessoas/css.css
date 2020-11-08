@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(127, 168, 255);
+    font: normal 15pt Arial;
+    color: white;;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    border-radius: 1em;
+    padding: 15px;
+    width: 75%;
+    margin: auto;
+    color: black;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.472);
+}
+form {
+    padding: 15px;
+    border-radius: 1em;
+    background-color: blanchedalmond;
+}
+
+img {
+    border-radius: 100%;
+}
+
+footer {
+    margin-top: 15pt;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background: rgb(143, 221, 112);
+        }
+        div {
+            border: 8px solid beige;
+            padding: 1em;
+            background: rgb(124, 124, 175);   
+        }
+        h1 {
+            text-align: center;
+        }
+        #enviar {
+            margin-top: 1em;
+        }
+        #vel {
+            width: 50px;
+        }
+        #multa {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <div>
+        <p>Informe sua velocidade:</p>
+        <input type="number" id="vel"> km/h <br>
+        <input type="submit" value="Enviar" id="enviar">
+        <p id="multa"></p>
+    </div>
+
+    <script>
+        document.getElementById("enviar").addEventListener("click", multar);
+
+        function multar() {
+            var vel = document.getElementById("vel").value,
+                resp;
+
+            if (vel > 60) {
+                resp = "acima do limite! <strong>MULTADO!</strong>";
+            } else {
+                resp = "dentro do limite. Não multado." ;  
+            };
+            document.getElementById("multa").innerHTML = `Sua velocidade está ${resp}`;
+        };
+    </script>
+</body>
+</html>

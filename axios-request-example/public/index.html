@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Requests Examples</title>
+    <script src="./bundle.js" defer></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        form#repoForm {
+            margin: auto;
+            padding: 1em;
+            width: 250px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(44, 42, 42);
+        }
+
+        form#repoForm * {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bolder;
+            color: white;
+            border: none;
+        }
+
+        input[type=text] {
+            background-color: rgba(0, 0, 0, 0.267);
+        }
+
+        input[type=text]::placeholder {
+            font-weight: 100;
+            color: rgba(255, 255, 255, 0.212);
+        }
+
+        input[type=button] {
+            background-color: teal;
+        }
+
+        input[type=button]:hover {
+            cursor: pointer;
+        }
+
+        ul#repoList {
+            margin: 40px auto auto;
+            width: 70%;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+
+        li {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            background-color: rgba(0, 128, 128, 0.26);
+        }
+
+        li img{
+            float: left;
+            height: 125px;
+            margin-right: 10px;
+            border: solid 2px rgb(44, 42, 42);
+            border-radius: 10px;
+        }
+
+        div#content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        div#content strong {
+            font-size: 1.2em;
+        }
+
+        div#content a {
+            background-color: teal;
+            padding: 5px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        div#content a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <form id="repoForm">
+        <input type="text" id="userName" placeholder="User name">
+        <input type="text" id="userRepo" placeholder="User repo">
+        <input type="button" value="Buscar">
+        <p id="message"></p>
+    </form>
+    <ul id="repoList"></ul>
+</body>
+</html>

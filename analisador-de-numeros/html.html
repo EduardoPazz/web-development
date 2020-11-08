@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Analisador de Números</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+
+    <section>
+        <div>
+            <label for="numero">Selecione números (Entre 0 e 100), sem repetir:</label> <br>
+            <input type="number" name="number" id="numero"> <br>
+            <p><input type="button" value="Adicionar número" id="adicionar_numero"> <br>
+            <input type="button" value="Gerar relatório" id="gerar_relatorio"></p> <br>
+            <select id="lista" size="10">
+            </select> 
+        </div> <br>
+
+        <div id="relatorio"></div>
+    </section>
+
+    <footer>
+        <p>Eduardo da Paz &#9774;</p>
+    </footer>
+
+    <script src="js.js" defer></script>
+</body>
+</html>

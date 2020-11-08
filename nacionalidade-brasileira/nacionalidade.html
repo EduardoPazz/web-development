@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        body {
+            background: rgb(143, 221, 112);
+        }
+        div {
+            border: 8px solid beige;
+            padding: 1em;
+            background: rgb(124, 124, 175);  
+            width: 50%; 
+        }
+        #enviar {
+            float: right;
+        }
+        #pais {
+            width: auto;
+        }
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testador de Nacionalidade</h1>
+    <div>
+        <p>Informe seu país natal:</p>
+        <input type="text" id="pais">
+        <input type="submit" value="Enviar" id="enviar">
+        <p id="multa"></p>
+    </div>
+
+    <script>
+        document.getElementById("enviar").addEventListener("click", nacao);
+
+        function nacao() {
+            var pais = document.getElementById("pais").value,
+                resp;
+
+            if (pais == "Brasil") {
+                resp = "Você é <strong>BRASILEIRO!</strong>";
+            } else {
+                resp = "Você é <strong>gringo!</strong>";  
+            };
+            document.getElementById("multa").innerHTML = resp;
+        };
+    </script>
+</body>
+</html>

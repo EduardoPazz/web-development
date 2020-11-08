@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipher</title>
+    <script type="module" src="main.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            color: white;
+        }
+
+        div#layout {
+            font-family: sans-serif;
+            text-align: center;
+            width: 300px;
+            margin: auto;
+            background-color: rgb(44, 43, 43);
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgb(10, 70, 2);
+        }
+
+        h1 {
+            color: rgb(208, 236, 199);
+        }
+
+        h2 {
+            color: rgb(80, 230, 34);
+            text-align: left;
+            margin: 10px auto 15px 20px
+        }
+
+        main {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        section {
+            border-radius: 5px;
+            background-color: rgb(112, 106, 106);
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            margin-bottom: 50px;
+        }
+
+        div#key {
+            margin-left: auto;
+            font-weight: bolder;
+            color: rgb(97, 255, 49);
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.774);
+            border-radius: 5px;
+            border: 2px solid rgba(80, 230, 34, 0.699);
+            color: white;
+            font-weight: 700;
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.541);
+            font-weight: initial;
+            font-style: italic;
+        }
+
+        input[type=number] {
+            box-sizing: border-box;
+            width: 65px;
+            text-align: center;
+            padding-left: 1px;
+            margin-left: auto;
+        }
+
+        input[type=button] {
+            background-color: antiquewhite;
+            width: 100px;
+            margin: 0 auto;
+            border: none;
+            color: initial;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        p {
+            padding: 10px;
+            background-color: rgb(15, 32, 11);
+            border-radius: inherit;
+            margin: 10px auto;
+            visibility: visible;
+            height: initial;
+            width: initial;
+        }
+
+        p.hidden {
+            visibility: hidden;
+            height: 0;
+            width: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="layout">
+        <h1>Cesar Cipher</h1>
+        <main>
+            <section id="encrypt">
+                <h2>Encrypt</h2>
+                <input type="text" name="" id="encryptMessage" placeholder="Put your text to be encrypted">
+                <div id="key">
+                    <label for="encryptKey">Key:</label> <input type="number" name="" id="encryptKey" min="1" max="25" value="1">
+                </div>
+                <input type="button" name="" id="encryptButton" value="Encrypt">
+                <p id="encryptResult" class="hidden">erherh</p>
+            </section>
+            <section id="decrypt">
+                <h2>Decrypt</h2>
+                <input type="text" name="" id="decryptMessage" placeholder="Put your cipher to be decrypted">
+                <div id="key">
+                    <label for="decryptKey">Key:</label> <input type="number" name="" id="decryptKey" min="1" max="25" value="1">
+                </div>
+                <input type="button" name="" id="decryptButton" value="Decrypt">
+                <p id="decryptResult" class="hidden"></p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

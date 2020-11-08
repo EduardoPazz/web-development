@@ -1,0 +1,26 @@
+{
+  "name": "api-request-example",
+  "version": "1.0.0",
+  "description": "A simple example using some differents features of ES6+ to make some requests to the GitHub API",
+  "main": "./src/index.js",
+  "author": "Eduardo da Paz <jooeduardo8@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-transform-async-to-generator": "^7.8.3",
+    "@babel/polyfill": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --mode=development",
+    "build": "webpack --mode=development"
+  }
+}

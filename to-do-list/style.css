@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+/* border-box setting */
+
+html {box-sizing: border-box;}
+
+*, *::before, *::after {box-sizing: inherit;}
+
+/* 
+    Hierarquy:
+        -header
+        -main
+            --section#inputs
+                ---div#buttons
+                ---form
+            --div#list
+                ---ul
+*/
+
+/* body */
+
+body {
+    font-family: sans-serif;
+    font-size: 20px;
+
+    margin: 0;
+}
+
+/* header */
+
+header {
+    height: 100px;
+    background-color: #57CFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 50px;
+
+    margin: 0;
+}
+
+/* main */
+
+main {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+/* section#inputs */
+
+section#inputs {
+    height: auto;
+    padding: 25px;
+    border-right: black 2px solid;
+}
+
+/* div#buttons */
+
+div#buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+div#buttons button {
+    font-size: inherit;
+
+    padding: 10px 0;
+
+    margin-bottom: 20px;
+}
+
+/* form */
+
+form {
+    text-align: center;
+
+    margin-top: 50px;
+    padding: 40px 10px;
+
+    background-color: #2B6880;
+
+    border-radius: 10px;
+
+    transition: all 250ms;
+}
+
+form.hide {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin-top: -1px;
+}
+
+form input {
+    height: 30px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+/* div#list */
+
+div#list {
+    transition: all 250ms;
+}
+
+div#list.hide {
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    margin-left: -16px;
+}
+
+/* ul */
+
+div#list ul {
+    display: grid;
+    grid-template-columns: 30px 9fr 1fr;
+    row-gap: 20px;
+
+    list-style-type: none;
+}
+
+div#list ul div#checkbox {
+    width: 25px;
+    height: 25px;
+
+    border-radius: 50%;
+    border: black solid 2px;
+
+    margin-right: 5px;
+
+    transition: all 400ms;
+}
+
+div#list ul div#checkbox.checked {
+    background-color: green;
+}
+
+div#list ul li {
+    border-bottom: black 1px solid;
+}
+
+div#list ul li.checked {
+    text-decoration: line-through;
+}
+
+div#list ul button {
+    max-width: 40px;
+
+    font-size: inherit;
+}

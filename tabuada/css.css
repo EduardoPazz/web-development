@@ -1,0 +1,20 @@
+body {
+    font: normal 15pt Arial;
+    color: white;
+    text-align: center;
+    background-color: cornflowerblue;
+}
+
+section {
+    background-color: white;
+    border-radius: 1em;
+    padding: 2em;
+    width: 75%;
+    margin: auto;
+    color: black;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.472);
+}
+
+footer, #button {
+    margin-top: 15pt;
+}

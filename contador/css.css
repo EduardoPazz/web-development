@@ -1,0 +1,30 @@
+body {
+    font: normal 15pt Arial;
+    color: white;
+    text-align: center;
+    background-color: cornflowerblue;
+}
+
+section {
+    background-color: rgb(245, 199, 199);
+    border-radius: 1em;
+    padding: 15px;
+    width: 75%;
+    margin: auto;
+    color: black;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.472);
+    text-align: left;
+}
+
+#parametros {
+    border: 4px solid rgb(226, 171, 19);
+    padding: 1em;
+}
+
+input, p {
+    text-align: right;
+}
+
+footer, #button {
+    margin-top: 15pt;
+}
